@@ -1,14 +1,9 @@
 function longestWord(inputString) {
-    const words = inputString.split(" ");
-    let longest = "";
-    for (const word of words) {
-      if (word.length > longest.length) {
-        longest = word;
-      }
-    }
-    return longest;
-  }
-  const inputString = "This is Optimusfox js internship class";
-  const longestOutput = longestWord(inputString);
-  console.log(longestOutput);
-  
+  return inputString.split(" ").reduce((longest, currentWord) => {
+    return currentWord.length > longest.length ? currentWord : longest;
+  }, "");
+}
+
+const inputString = "This is Optimusfox js internship class";
+const longestOutput = longestWord(inputString);
+console.log(longestOutput);
