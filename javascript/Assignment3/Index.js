@@ -66,7 +66,7 @@ async function fetchTodos() {
 
 function displayOutput(data) {
     const outputElement = document.getElementById('output');
-    outputElement.innerHTML = ''; // Clear previous output
+    outputElement.innerHTML = ''; 
     document.getElementById('comments-table').style.display = 'none';
     data.forEach(item => {
         const itemElement = document.createElement('div');
